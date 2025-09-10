@@ -3,7 +3,7 @@ import axios from 'axios';
 import './Restanew.css'
 
 
-function Restanew() {
+function restanew() {
   const [menuname, setMenuName] = useState('');
   const [price, setPrice] = useState('');
   const [restaurantname, setRestaurantname] = useState('');
@@ -70,4 +70,4 @@ async function handleSubmit(e) {
   );
 }
 
-export default Restanew;
+export default restanew;
