@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './Restaurant.css';
 import Restamenu from './Restamenu';
-import Restanew from './restanew';
+import Restanew from './RestaNewpage';
 import Restaorder from './Restaorder';
 
 function Restaurant() {
