@@ -9,7 +9,7 @@ import Restaurant from './pages/customer/Restaurant'
 import Home from './pages/home/Home'
 import Mainlayout from './pages/home/Mainlayout'
 import Restamenu from './pages/customer/Restamenu'
-import Restanew from './pages/customer/restanew'
+import RestaNewpage from './pages/customer/RestaNewpage'
 import Restaorder from './pages/customer/Restaorder'
 import Customer from './pages/customer/Customer'
 import Logout from './pages/customer/logout'
@@ -52,8 +52,8 @@ function App() {
   <Route path='/logout' element={<Logout/>}/>
   <Route path='/restaurant' element={<Restaurant/>}/>
   <Route path='/restamenu' element={<Restamenu />}/>
-  <Route path='/restanew' element={<Restanew  />}/>
-     
+  <Route path='/restanew' element={<RestaNewpage />}/>
+
       <Route path='/orders/:id' element={<Order order={order} setCustomerOrder={setCustomerOrder} customerorder={customerorder}  />}/>
       <Route path='/customerorder' element={<Customerorder/>}/>
       <Route path='/ordersummary' element={<OrderSummary customerorder={customerorder} />} />
