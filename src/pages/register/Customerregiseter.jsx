@@ -47,7 +47,7 @@ if(e.target.name=="password"){
   
   
   try {
-      const response=await axios.post('https://food-ordering-frontend-beta.vercel.app/registercustomer',{email,password,name,phone,address})
+      const response=await axios.post('https://food-ordering-backend-zeta.vercel.app/registercustomer',{email,password,name,phone,address})
       console.log(response.data);
       setError(response?.data.message);
      

@@ -28,7 +28,7 @@ function Restaurantlogin() {
 
   
   try {
-    const response=await axios.post('https://food-ordering-frontend-beta.vercel.app/loginrestaurant',{email,password})
+    const response=await axios.post('https://food-ordering-backend-zeta.vercel.app/loginrestaurant',{email,password})
      localStorage.setItem('token', response.data?.token)
      const extractedToken=jwtDecode(response.data?.token)
     
