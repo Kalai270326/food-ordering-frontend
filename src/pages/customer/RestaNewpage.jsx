@@ -32,7 +32,7 @@ const [menuname, setMenuName] = useState('');
 async function handleSubmit(e) {
     e.preventDefault();
     try {
-      const response = await axios.post('https://food-ordering-backend-zeta.vercel.app/menu/createmenu', { menuname,
+      const response = await axios.post('http://localhost:3000/menu/createmenu', { menuname,
         price,
         restaurantname,
         email,
