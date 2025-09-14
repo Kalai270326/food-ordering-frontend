@@ -26,7 +26,7 @@ function Restamenu({customerorder}) {
 
     async function getSpecificMenu(name) {
       try {
-        const response = await axios.get('http://localhost:3000/menu/getspecific', { params: { restaurantname: name } });
+        const response = await axios.get('https://food-ordering-backend-two.vercel.app/menu/getspecific', { params: { restaurantname: name } });
         setMenuItems(response?.data);
         console.log(response.data);
         console.log(customerorder);
