@@ -89,11 +89,13 @@ border-radius: 8px;
     width: 150px;
     
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 426px) {
     .main-nav{
-        flex-direction: column;
+        flex-direction: row;
         height: auto;
         padding: 10px 0;
+        width: 200% ;
+         
     }
     .right-nav{
         margin: 10px 0;
@@ -105,7 +107,7 @@ border-radius: 8px;
         margin: 10px 0;
     }
     .logo-button>img{
-        margin-left: 0;
+        margin-left: 5px;
         height:100px;
         width: 100px;
         
