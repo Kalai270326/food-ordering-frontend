@@ -89,3 +89,26 @@ border-radius: 8px;
     width: 150px;
     
 }
+@media screen and (max-width: 768px) {
+    .main-nav{
+        flex-direction: column;
+        height: auto;
+        padding: 10px 0;
+    }
+    .right-nav{
+        margin: 10px 0;
+        gap: 15px;
+        margin-right: 0;
+    }
+    .center-nav>input[type='text']{
+        width: 90%;
+        margin: 10px 0;
+    }
+    .logo-button>img{
+        margin-left: 0;
+        height:100px;
+        width: 100px;
+        
+    }
+    
+}
