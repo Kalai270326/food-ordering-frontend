@@ -17,6 +17,14 @@ function Restaorder() {
 
 
   console.log('customerorder:', storedOrders);
+  function  handleUpdateStatus(index) {
+    const statuschange=index.status
+    console.log('Update status for order:', index);
+    index.status=statuschange==='Pending'?'Delivered':'Pending'
+     localStorage.setItem('customerorder', JSON.stringify(storedOrders));
+    window.location.reload();
+  
+  }
 
   return (
     <div>
@@ -32,10 +40,9 @@ function Restaorder() {
             <p><strong>Quantity:</strong> {order.quantity}</p>
             <p><strong>Price:</strong> ₹{order.price}</p>
             <p><strong>Total:</strong> ₹{order.total}</p>
-          
-          <p><strong>Status:</strong> {order.status}</p>
-          
-            <button>Update Status</button>
+          <p><strong>Status:</strong> <span style={{ color: order.status === 'Pending' ? 'orange' : 'blue' }}>{order.status}</span></p>
+
+            <button onClick={() => handleUpdateStatus(order)}>Update Status</button>
         </div>
 
        

@@ -21,12 +21,12 @@ function Order({setCustomerOrder,customerorder,order}) {
     setMessage('Order placed successfully!')
     
     if(customerorder?.length>0){
-    setCustomerOrder([...customerorder, { ...prod, quantity, total: totalPrice, customerName: username, customerEmail: useremail, phone: userphone }]);
+    setCustomerOrder([...customerorder, { ...prod, quantity, total: totalPrice, customerName: username, customerEmail: useremail, phone: userphone ,status:'Pending'}] );
 
   }
 
     else{
-        setCustomerOrder([{ ...prod, quantity, total: totalPrice, customerName: username, customerEmail: useremail, phone: userphone }]);
+        setCustomerOrder([{ ...prod, quantity, total: totalPrice, customerName: username, customerEmail: useremail, phone: userphone ,status:'Pending'}]);
       }
     }
    

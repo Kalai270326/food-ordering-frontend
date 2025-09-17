@@ -1,16 +1,22 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './OrderSummary.css';
 import { jwtDecode } from 'jwt-decode';
 
 function OrderSummary({ customerorder }) {
+   const stored = JSON.parse(localStorage.getItem('customerorder')) || [];
     const token = localStorage.getItem('token');
     const decode = jwtDecode(token);
     const username = decode?.name;
    
 
-    const filteredOrders = Array.isArray(customerorder)
-    ? customerorder.filter(order => order.customerName === username)
+
+    const filteredOrders = Array.isArray(stored)
+    ? stored.filter(order => order.customerName === username)
     : [];
+    
+
+
+   
 
 
 
@@ -35,7 +41,7 @@ function OrderSummary({ customerorder }) {
             <p><strong>Price:</strong> ₹{order.price}</p>
             <p><strong>Total:</strong> ₹{order.total}</p>
             <p><strong>Restaurant:</strong> {order.restaurantname}</p>
-            <p><strong>Status:</strong> {order.status}</p>
+            <p><strong>Status:</strong> <span style={{ color: order.status === 'Pending' ? 'orange' : 'blue' }}>{order.status}</span></p>
           </div>
         ))
       ) : (
