@@ -1,0 +1,27 @@
+.orderrest>div{
+
+    margin-bottom: 10px;
+    margin-top: 30px;
+    margin-left: 30px;
+    width: 350px;
+    border-radius: 6px;
+}
+.orderrest{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap:20px;
+}
+.orderrest>div>button{
+    margin-top: 15px;
+    width: 100px;
+    height: 30px;
+    border-radius: 6px;
+    background-color: #e65d45;
+    color: white;
+    border: none;
+    cursor: pointer;
+    &:hover{
+        background-color: #f92807;
+    }
+}
