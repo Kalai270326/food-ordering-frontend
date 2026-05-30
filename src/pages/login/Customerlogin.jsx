@@ -29,7 +29,7 @@ async function customerlogin(e){
 
   
   try {
-    const res=await axios.post('https://food-ordering-backend-qdww.vercel.app/logincustomer',{email,password})
+    const res=await axios.post('https://food-ordering-backend-az2i.vercel.app/logincustomer',{email,password})
      localStorage.setItem('token',res.data?.token)
      const extractedToken=jwtDecode(res.data?.token)
      setError(res?.data?.message)
