@@ -27,7 +27,7 @@ function App() {
     const [customerorder, setCustomerOrder] = useState([])
    useEffect(() => {
      async function getallmenu (){
-        const response=await axios.get('https://food-ordering-backend-az2i.vercel.app/menu/all')
+        const response=await axios.get(`${process.env.REACT_APP_SERVER_URL}/menu/all`)
 
         setAllMenu(response?.data)
      }

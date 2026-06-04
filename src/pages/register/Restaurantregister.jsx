@@ -47,7 +47,7 @@ async function restregister()
   
   
   try {
-      const response=await axios.post('https://food-ordering-backend-az2i.vercel.app/registerrestaurant',{email,password,restaurantname,phone,address})
+      const response=await axios.post(`${process.env.REACT_APP_SERVER_URL}/registerrestaurant`,{email,password,restaurantname,phone,address})
       
       setError(response?.data.message);
      
